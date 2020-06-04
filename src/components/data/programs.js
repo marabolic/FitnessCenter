@@ -9,7 +9,7 @@ const programs = [
         rating: 3.4,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const programs = [
         rating: 4.0,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const programs = [
         rating: 4.2,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const programs = [
         rating: 4.8,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ const programs = [
         rating: 3.7,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ const programs = [
         rating: 4.5,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ const programs = [
         rating: 5.0,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ const programs = [
         rating: 4.4,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 9,
@@ -105,7 +105,7 @@ const programs = [
         rating: 4.2,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 10,
@@ -117,7 +117,7 @@ const programs = [
         rating: 4.3,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 11,
@@ -129,7 +129,7 @@ const programs = [
         rating: 3.7,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
     {
         id: 12,
@@ -141,7 +141,7 @@ const programs = [
         rating: 4.9,
         pictures: 'usce.jpg',
         video: '',
-        coments: ''
+        comments: ''
     },
 
 ];
