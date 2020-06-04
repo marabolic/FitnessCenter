@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import TrainingDetails from '../components/services/TrainingDetails.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,11 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/trainingdetails/:id',
+    name:'Details',
+    component: TrainingDetails
   },
   {
     path: '/about',

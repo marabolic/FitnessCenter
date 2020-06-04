@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <WhyUs msg="Welcome to Your Vue.js App"/>
+    <TopRated msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import WhyUs from '@/components/homepage/WhyUs.vue'
+import TopRated from '@/components/homepage/TopRated.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    WhyUs,
+    TopRated
+  },
+  created(){
+      localStorage.setItem('lang', 'en');
   }
 }
 </script>
