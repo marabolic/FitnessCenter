@@ -21,19 +21,19 @@
 								</router-link>
 							</li>
 							<li class="nav-item dropdown">
-								<router-link to="/about">
+								<router-link to="/services">
 									<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
 										Usluge
 									</a>
 								</router-link>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<router-link to="/about">
+									<router-link to="/massage">
 										<a class="dropdown-item">Masaza</a>
 									</router-link>
-									<router-link to="/nut">
+									<router-link to="/nutritionist">
 										<a class="dropdown-item">Nutricionista</a>
 									</router-link>
-									<router-link to="/tren">
+									<router-link to="/train">
 										<a class="dropdown-item">Trening</a>
 									</router-link>
 								</div>
