@@ -39,7 +39,7 @@
 								</div>
 							</li>
 							<li class="nav-item">
-								<router-link to="/about">
+								<router-link to="/reservation">
 									<a class="nav-link" href="#">Zakazivanje</a>
 								</router-link>
 							</li>
