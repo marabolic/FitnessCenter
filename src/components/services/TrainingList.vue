@@ -1,34 +1,23 @@
 <template>
-    <div v-if="lang=='en'">
-        <h3>Programs</h3>
-         <div v-for='training in trainings' :key="training.id" > 
-            <div v-if="training">
+    <div>
+        <h3 v-if="lang=='en'">Programs</h3>
+        <h3 v-else> Programi </h3>
+        <div class="row">
+            <div class='col-sm-4' v-for='training in trainings' :key="training.id"> 
                 <router-link :to='/trainingdetails/+training.id'>
                     <Training :training='training'/>
-                    
-
                 </router-link>
             </div>
         </div>
+            
     </div>
-    <div v-else>
-        <h3>Programi</h3>
-        <div v-for='training in trainings' :key="training.id" > 
-            <div v-if="training">
-                <!--<router-link :to='/trainingdetails/+training.id'>-->
-                <router-link :to='/trainingdetails/+training.id'>
-                    <Training :training='training'/>
-                    
-                </router-link>
-            </div>
-        </div>
-    </div>
-    
 </template>
 
+<style>
+</style>
 
 <script>
-import Training from '../services/Training'
+import Training from '../services/links/Training'
 import progs from '../data/programs.js'
 
 export default {

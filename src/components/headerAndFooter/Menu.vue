@@ -27,10 +27,10 @@
 									</a>
 								</router-link>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<router-link to="/about">
+									<router-link to="/massage">
 										<a class="dropdown-item">Masaza</a>
 									</router-link>
-									<router-link to="/nut">
+									<router-link to="/nutritionist">
 										<a class="dropdown-item">Nutricionista</a>
 									</router-link>
 									<router-link to="/train">

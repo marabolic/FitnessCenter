@@ -1,7 +1,7 @@
 <template>
     <div id = 'massage'>
-        <form >
-            <table >
+        <form>
+            <table>
                 <tr>
                     <td v-if="lang=='en'"> Name: </td>
                     <td v-else> Ime: </td>
@@ -30,7 +30,12 @@
                 <tr>
                     <td v-if="lang=='en'"> Description: </td>
                     <td v-else> Opis problema: </td>
-                    <td><input type="text" v-model="description"> </td>
+                    <td><input type="text" v-model='description'> </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" @click="add"  class='btn btn-outline-dark'>Add</button>
+                    </td>
                 </tr>
             </table>
         </form>
@@ -47,9 +52,24 @@
 <script>
 export default {
     name:'MassageForm',
+    data(){
+        return{
+            name: '',
+            surname: '',
+            email: '',
+            phone: '',
+            date: '',
+            description: ''
+        }
+    },
     created(){      
-        if(localStorage.getItem('lang')!=null){
+        if(localStorage.getItem('lang')!=null) {
             this.lang = localStorage.getItem('lang');
+        }
+    },
+    methods:{
+        add(){
+             
         }
     }
 }

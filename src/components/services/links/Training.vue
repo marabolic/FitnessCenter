@@ -1,12 +1,12 @@
 <template>
     <div class='training'>
-        <div class='card'>
-            <div class='card-body' v-if="lang=='en'">
+        <div >
+            <div v-if="lang=='en'">
                 <h3>{{training.type}}</h3>
                 <h5>{{training.subtype}}</h5>
                 <h5>{{training.rating}}</h5>
             </div>
-            <div class='card-body' v-else>
+            <div v-else>
                 <h3>{{training.alttype}}</h3>
                 <h5>{{training.altsubtype}}</h5>
                 <h5>{{training.rating}}</h5>
@@ -14,6 +14,17 @@
         </div>
     </div>
 </template>
+
+<style>
+    .card{
+        width: 100%;
+
+    }
+    .card-body{
+        width: 100%;
+
+    }
+</style>
 
 <script>
 export default {

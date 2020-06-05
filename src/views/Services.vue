@@ -1,22 +1,22 @@
 <template>
     <div class= 'services'>
-        <Programs msg="Welcome to Your Vue.js App"/>
-        <Massage msg="Welcome to Your Vue.js App"/>
-        <Nutritionist msg="Welcome to Your Vue.js App"/>
+        <TypeLink msg="Welcome to Your Vue.js App"/>
+        <MassageLink msg="Welcome to Your Vue.js App"/>
+        <NutritionistLink msg="Welcome to Your Vue.js App"/>
     </div>
 </template>
 
 
 <script>
-    import Programs from "../views/Programs"
-    import Massage from "../views/Massage"
-    import Nutritionist from "../views/Nutritionist"
+    import TypeLink from "../components/services/links/TypeLink"
+    import MassageLink from "../components/services/links/MassageLink"
+    import NutritionistLink from "../components/services/links/NutriLink"
     export default {
             name:"Services",
             components:{
-                Programs,
-                Massage,
-                Nutritionist
+                TypeLink,
+                MassageLink,
+                NutritionistLink
             }
     }
 </script>

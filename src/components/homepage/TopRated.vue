@@ -1,21 +1,14 @@
 <template>
-    <div v-if="lang=='en'">
-        <h3>Top rated programs</h3>
-         <div v-for='training in trainings.slice(0,3)' :key="training.id" > 
-            <div v-if="training">
-                <router-link :to='/trainingdetails/+training.id'>
-                    <Training :training='training'/>
-                </router-link>
-            </div>
-        </div>
-    </div>
-    <div v-else>
-        <h3>Najbolje ocenjeni programi</h3>
-        <div v-for='training in trainings.slice(0,3)' :key="training.id" > 
-            <div v-if="training">
-                <router-link :to='/trainingdetails/+training.id'>
-                    <Training :training='training'/>
-                </router-link>
+    <div >
+        <h3 v-if="lang=='en'">Top rated programs</h3>
+        <h3 v-else>Najbolje ocenjeni programi</h3>
+        <div class="row">
+            <div class="col-sm-4" v-for='training in trainings.slice(0,3)' :key="training.id" > 
+                <div v-if="training">
+                    <router-link :to='/trainingdetails/+training.id'>
+                        <Training :training='training'/>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>
@@ -23,7 +16,7 @@
 </template>
 
 <script>
-import Training from '../services/Training'
+import Training from '../services/links/Training'
 import progs from '../data/programs.js'
 
 export default {
