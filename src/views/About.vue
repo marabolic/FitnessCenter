@@ -15,9 +15,9 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-8 team">
+				<div class="col-md-8 col-sm-12 team">
 				</div>
-				<div class="col-4">
+				<div class="col-md-4 col-sm-12">
 					<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
 				</div>
 			</div>
@@ -34,14 +34,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-8">
+				<div class="col-md-8 col-sm-12">
 				</div>
-				<div class="col-4 team">
+				<div class="col-md-4 col-sm-12 team">
 					<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="offset-2 col-8 team">
 				</div>
 			</div>
 			<div class="row">
@@ -57,7 +53,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-6">
+				<div class="col-md-6 col-sm-12">
 					<div id="mapDiv">
 						<div id="display-googlemap">
 							<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Maksima+Gorkog+5,+Beograd&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
@@ -65,7 +61,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-6 text-left">
+				<div class="col-md-6 col-sm-12 text-left">
 					<h3> Contact: </h3>
 					<p>
 						Have any questions, call here:
