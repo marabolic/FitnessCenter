@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Programs from '../views/Programs.vue'
+import Services from '../views/Services.vue'
 import TrainingDetails from '../components/services/TrainingDetails.vue'
 
 Vue.use(VueRouter)
@@ -30,6 +31,11 @@ Vue.use(VueRouter)
     name: 'Programs',
     component: Programs
     //component: () => import(/* webpackChunkName: "about" */ '../views/Programs.vue')
+  },
+  {
+    path: '/services',
+    name: 'Services',
+    component: Services
   }
 ]
 
