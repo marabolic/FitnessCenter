@@ -1,4 +1,4 @@
-<template>
+<template >
 	<div class="vertical-menu">
 		<div v-if="filter == 'Core'">
 			<a class="active">Core</a>
@@ -32,6 +32,7 @@
 
 .vertical-menu{
 	width: 100%;
+	height: 100%;
 	border-top: #00BFF0 8px solid;
 	background-color: #F0F0F0;
 }
@@ -74,9 +75,21 @@ export default {
 	},
 	methods:{
 		go: function(path){
-			this.$router.replace(path);
+			if(this.filter == null || this.filter == "undefined"){
+				this.$router.push('reservation/'+path);
+			}
+			else{
+				this.$router.replace(path);
+			}
 			this.filter=path;
+			this.$forceUpdate();
 		}
+	},
+	watch: {
+		'$route' () {
+			this.filter=this.$route.params.filter;
+		}
+
 	}
 }
 </script>
