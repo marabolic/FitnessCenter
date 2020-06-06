@@ -1,38 +1,108 @@
+
+
 <template>
-	<div>
-		<!--<div v-for='training in trainings.type' :key="training.id" > 
-            <div v-if="training.type=type">
-                <router-link :to='/trainingdetails/+training.id'>
-                    <Training :training='training'/>
-                </router-link>
-            </div>
-        </div>-->
-        <h2>Tip: {{type}} </h2>
+	<div class="filtered">
+		<div v-if="check()" class="row">
+			<div class="col-12">
+				<div class="row gap">
+					<div class="col-12">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row links">
+					<div v-for="item in items" class="col-12 col-sm-6 col-md-4" :key=item.id>
+						<Linkube :text=makeText(item) :img=item.pictures :link="/weekly/+item.id" />
+					</div>
+				</div>
+				<div class="row gap">
+					<div class="col-12">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+		</div>
+		<div v-else>
+			<div class="col-12">
+				<div class="row gap">
+					<div class="col-12">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row links">
+					<div v-for="item in allItems" class="col-12 col-sm-6 col-md-4" :key=item.id>
+						<Linkube :text=makeText(item) :img=item.pictures :link="/weekly/+item.id" />
+					</div>
+				</div>
+				<div class="row gap">
+					<div class="col-12">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
+<style>
+.gap{
+	height: 35px;
+}
+.links > *{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+</style>
 
 <script>
+import Linkube from '../services/links/Linkube.vue'
 import progs from '../data/programs.js'
-export default {
-	name: "TrainingType",
-	data(){
-        return { 
-            type: {},
-            trainings: progs
-        }
-    },
-    created(){      
-        if(localStorage.getItem('lang')!=null){
-            this.lang = localStorage.getItem('lang');
-        }
 
-        let type = this.$route.params.type;
-        let temp_t = this.trainings.find(
-            training=>training.type==type
-        );
-        this.type = temp_t;
-        //console.log(this.training);
-    }
+export default {
+	name: 'TrainingType',
+	components: {
+		Linkube
+	},
+	created: function(){
+        this.filter=this.$route.params.type;
+        
+        this.filter=this.$route.params.type;
+        if(this.filter == null || this.filter == "undefined"){
+                console.log(this.filter);
+            this.items=this.allItems;
+        }
+        else{
+            this.items=[];
+            
+            for(let i = 0; i<this.allItems.length; i++){
+                if(this.allItems[i].type == this.filter)
+                    this.items.push(this.allItems[i]);
+            }
+        }
+},
+	methods:{
+		check: function(){
+            this.filter=this.$route.params.type;
+			if(this.filter == null || this.filter == "undefined"){
+				return false;
+			}
+			else{
+				return true;
+			}
+		},
+		makeText: function(item){
+			return [item.type, item.subtype]
+		}
+	},
+	updated: function(){
+        this.filter=this.$route.params.type;
+	},
+	data: function(){
+		return{
+			filter: 0,
+			items: progs,
+			allItems: progs
+		}
+	},
 }
 </script>
+ 

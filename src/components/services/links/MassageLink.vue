@@ -1,7 +1,18 @@
 <template>
-    <div>
-        <router-link to='/massage'>
-            Massage
-        </router-link>
-    </div>
+        <Linkube img="Massage.jpg" link="/massage" :text=title />
 </template>
+
+<script>
+import Linkube from "./Linkube"
+export default {
+    name:'MassageLink',
+    components:{
+        Linkube
+    },
+    data(){
+        return{
+            title: ["Massage"]
+        }
+    }
+}
+</script>
