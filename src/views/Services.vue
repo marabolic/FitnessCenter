@@ -1,8 +1,16 @@
 <template>
     <div class= 'services'>
-        <TypeLink msg="Welcome to Your Vue.js App"/>
-        <MassageLink msg="Welcome to Your Vue.js App"/>
-        <NutritionistLink msg="Welcome to Your Vue.js App"/>
+        <div class='row'>
+            <div class='col-4'>
+                <TypeLink msg="Welcome to Your Vue.js App"/>
+            </div>
+            <div class='col-4'>
+                <MassageLink msg="Welcome to Your Vue.js App"/>
+            </div>
+            <div class='col-4'>
+                <NutritionistLink msg="Welcome to Your Vue.js App"/>
+            </div>
+        </div>
     </div>
 </template>
 
