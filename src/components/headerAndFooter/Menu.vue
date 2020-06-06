@@ -17,40 +17,82 @@
 						<ul class="navbar-nav justify-content-end">
 							<li class="nav-item active">
 								<router-link to="/">
-									<a class="nav-link" href="#">Pocetna</a>
+									<div v-if="lang=='en'">
+										<a class="nav-link" href="#">Home</a>
+									</div>
+									<div v-else>
+										<a class="nav-link" href="#">Pocetna</a>
+									</div>
 								</router-link>
 							</li>
 							<li class="nav-item dropdown">
 								<router-link to="/services">
-									<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-										Usluge
-									</a>
+									<div v-if="lang=='en'">
+										<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+											Services
+										</a>
+									</div>
+									<div v-else>
+										<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+											Usluge
+										</a>
+									</div>
 								</router-link>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 									<router-link to="/massage">
-										<a class="dropdown-item">Masaza</a>
+										<div v-if="lang=='en'">
+											<a class="dropdown-item">Massage</a>
+										</div>
+										<div v-else>
+											<a class="dropdown-item">Masaza</a>
+										</div>
 									</router-link>
 									<router-link to="/nutritionist">
-										<a class="dropdown-item">Nutricionista</a>
+										<div v-if="lang=='en'">
+											<a class="dropdown-item">Nutritionist</a>
+										</div>
+										<div v-else>
+											<a class="dropdown-item">Nutricionista</a>
+										</div>
 									</router-link>
 									<router-link to="/train">
-										<a class="dropdown-item">Trening</a>
+										<div v-if="lang=='en'">
+											<a class="dropdown-item">Training</a>
+										</div>
+										<div v-else>
+											<a class="dropdown-item">Trening</a>
+										</div>
 									</router-link>
 								</div>
 							</li>
 							<li class="nav-item">
 								<router-link to="/reservation">
-									<a class="nav-link" href="#">Zakazivanje</a>
+									<div v-if="lang=='en'">
+										<a class="nav-link" href="#">Reservations</a>
+									</div>
+									<div v-else>
+										<a class="nav-link" href="#">Zakazivanje</a>
+									</div>
 								</router-link>
 							</li>
 							<li class="nav-item">
 								<router-link to="/about">
-									<a class="nav-link" href="#">Moj Nalog</a>
+									<div v-if="lang=='en'">
+										<a class="nav-link" href="#">My Account</a>
+									</div>
+									<div v-else>
+										<a class="nav-link" href="#">Moj Nalog</a>
+									</div>
 								</router-link>
 							</li>
 							<li class="nav-item">
 								<router-link to="/about">
-									<a class="nav-link" href="#">O Nama</a>
+									<div v-if="lang=='en'">
+										<a class="nav-link" href="#">About us</a>
+									</div>
+									<div v-else>
+										<a class="nav-link" href="#">O Nama</a>
+									</div>
 								</router-link>
 							</li>
 						</ul>
@@ -59,3 +101,15 @@
 			</div>
 		</div>
 </template>
+
+
+<script>
+export default {
+	name: "",
+	created(){      
+        if(localStorage.getItem('lang')!=null){
+            this.lang = localStorage.getItem('lang');
+		}
+	}
+}
+</script>
