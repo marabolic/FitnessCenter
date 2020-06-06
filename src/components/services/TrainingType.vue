@@ -1,42 +1,4 @@
-<!--<template>
-	<div>
-		<div v-for='training in trainings.type' :key="training.id" > 
-            <div v-if="training.type=type">
-                <Linkube img="ClassicPilates.jpg" link="/pilates/+Pilates" :text=title />
-            </div>
-        </div>
-	</div>
-</template>
 
-
-<script>
-import progs from '../data/programs.js'
-import Linkube from "./links/Linkube"
-export default {
-    name: "TrainingType",
-    components:{
-		Linkube
-	},
-	data(){
-        return { 
-            type: {},
-            trainings: progs
-        }
-    },
-    created(){      
-        if(localStorage.getItem('lang')!=null){
-            this.lang = localStorage.getItem('lang');
-        }
-
-        let type = this.$route.params.type;
-        let temp_t = this.trainings.find(
-            training=>training.type==type
-        );
-        this.type = temp_t;
-        //console.log(this.training);
-    }
-}
-</script>-->
 
 <template>
 	<div class="filtered">
