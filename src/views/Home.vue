@@ -17,7 +17,6 @@ export default {
     TopRated
   },
   created(){
-      localStorage.setItem('lang', 'en');
   }
 }
 </script>
