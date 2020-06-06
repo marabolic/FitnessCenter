@@ -8,6 +8,7 @@ import Services from '../views/Services.vue'
 import TrainingType from '../components/services/TrainingType'
 import TrainingDetails from '../components/services/TrainingDetails.vue'
 import Reservation from '../views/Reservation.vue'
+import Weekly from '../views/Weekly.vue'
 
 Vue.use(VueRouter)
 
@@ -80,6 +81,11 @@ const routes = [
 		path: '/reservation',
 		name: 'Reservation',
 		component: Reservation
+	},
+	{
+		path: '/weekly/:id',
+		name: 'Weekly',
+		component: Weekly
 	},
 
 
