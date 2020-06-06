@@ -2,9 +2,8 @@
     <div class='training'>
         <div >
             <div v-if="lang=='en'">
-                <h3>{{training.type}}</h3>
-                <h5>{{training.subtype}}</h5>
-                <h5>{{training.rating}}</h5>
+                <Linkube img="Massage.jpg" :link="/training/+training.id" :text=text />
+                
             </div>
             <div v-else>
                 <h3>{{training.alttype}}</h3>
@@ -27,14 +26,28 @@
 </style>
 
 <script>
+import Linkube from "./Linkube"
+
 export default {
     name: 'Training',
     props:[
         'training'
     ],
+    components:{
+        Linkube
+    },
     created(){      
         if(localStorage.getItem('lang')!=null){
             this.lang = localStorage.getItem('lang');
+        }
+
+        this.text = " Pre" + this.training.type + "Posle"
+                this.training.subtype +
+                this.training.rating;
+    },
+    data(){
+        return{
+            text: ""
         }
     }
 }

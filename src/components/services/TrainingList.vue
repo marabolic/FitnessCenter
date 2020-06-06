@@ -4,9 +4,9 @@
         <h3 v-else> Programi </h3>
         <div class="row">
             <div class='col-sm-4' v-for='training in trainings' :key="training.id"> 
-                <router-link :to='/trainingdetails/+training.id'>
+                
                     <Training :training='training'/>
-                </router-link>
+                
             </div>
         </div>
             
