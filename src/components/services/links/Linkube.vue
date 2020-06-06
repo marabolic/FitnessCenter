@@ -30,7 +30,6 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	left: 0;
-	display: list-item;
 	vertical-align: middle;
 }
 

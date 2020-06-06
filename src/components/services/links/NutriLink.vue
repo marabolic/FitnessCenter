@@ -1,5 +1,5 @@
 <template>
-         <Linkube img="Nutri.jpg" link="/nutritionist" text="Nutririonist"/>
+         <Linkube img="Nutri.jpg" link="/nutritionist" :text=title />
 </template>
 
 <script>
@@ -8,6 +8,11 @@ export default {
     name:'NutriLink',
     components:{
         Linkube
+    },
+    data(){
+        return{
+            title: ["Nutritionist"]
+        }
     }
 }
 </script>

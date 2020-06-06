@@ -1,18 +1,28 @@
 <template>
     <div class= 'services'>
         <div class='row'>
-            <div class='col-4'>
-                <TypeLink msg="Welcome to Your Vue.js App"/>
+            <div class='col-12'>
+                <TypeLink/>
             </div>
-            <div class='col-4'>
-                <MassageLink msg="Welcome to Your Vue.js App"/>
+        </div>
+        <div class="row">
+            <div class='col-3 offset-3'>
+                <MassageLink/>
             </div>
-            <div class='col-4'>
-                <NutritionistLink msg="Welcome to Your Vue.js App"/>
+            <div class='col-3'>
+                <NutritionistLink/>
             </div>
         </div>
     </div>
 </template>
+
+<style >
+
+.services > *{
+    margin: 10px
+}
+
+</style>
 
 
 <script>

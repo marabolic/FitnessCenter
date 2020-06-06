@@ -1,34 +1,38 @@
 <template>
-<div>
-	<router-link :to='/yoga/+Yoga' >
-		Yoga
-	</router-link>
-	<router-link :to='/pilates/+Pilates'>
-		Pilates
-	</router-link>
-	<router-link :to='/core/+Core'>
-		Core
-	</router-link>
-	<router-link :to='/cardio/+Cardio'>
-		Cardio
-	</router-link>
-</div>
+	<div class='row'>
+		<div class='col-3'>
+			<Linkube img="Meditation.jpg" link="/yoga/+Yoga" :text=titleY />
+		</div>
+		<div class='col-3'>
+			<Linkube img="ClassicPilates.jpg" link="/pilates/+Pilates" :text=titleP />
+		</div>
+		<div class='col-3'>
+			<Linkube img="Nutri.jpg" link="/core/+Core" :text=titleCo />
+		</div>
+		<div class='col-3'>
+			<Linkube img="tabata.jpg" link="/core/+Cardio" :text=titleCa />
+		</div>
+	</div>
 </template>
 
 <script>
 
-
+import Linkube from "./Linkube"
 export default {
 	name:"TypeLink",
-	components: {
-		
+	components:{
+		Linkube
 	},
 	data(){
 		return{
 			Yoga : "Yoga",
 			Pilates: "Pilates",
 			Core: "Core",
-			Cardio: "Cardio"
+			Cardio: "Cardio",
+			titleY: ["Yoga"],
+			titleP: ["Pilates"],
+			titleCo: ["Core"],
+			titleCa: ["Cardio"],
 		}
 	}
 
