@@ -5,7 +5,7 @@
 				<FilterByType/>
 			</div>
 			<div class="col-10">
-				<Weekly/>
+				<FilteredTrainingList/>
 			</div>
 		</div>
 	</div>
@@ -16,16 +16,16 @@
 
 <script>
 
-import Weekly from '../components/services/Weekly.vue'
+import FilteredTrainingList from '../components/services/FilteredTrainingList.vue'
 import FilterByType from '../components/services/FilterByType.vue'
 
 export default {
 	name: 'Reservation',
 	components: {
-		Weekly,
+		FilteredTrainingList,
 		FilterByType
 	},
-	created(){
+	created: function(){
 	}
 }
 </script>
