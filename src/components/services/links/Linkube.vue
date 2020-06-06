@@ -41,7 +41,7 @@
 
 .linkubebar{
 	background-color: #72D0F4;
-	color: white;
+	color: black;
 	height: auto;
 	overflow-wrap: break-word;
 	font-size: 1.5em;

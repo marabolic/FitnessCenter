@@ -3,22 +3,35 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h1> About us </h1>
+					<h1 v-if="lang=='en'"> About us </h1>
+					<h1 v-else> O nama </h1>
 					<hr>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<h2>
-						Our team
-					</h2>
+					<h2 v-if="lang=='en'"> Our team </h2>
+					<h1 v-else> Nas tim </h1>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-8 col-md-12 team">
+					<img src="../../public/img/Team.jpg">
 				</div>
 				<div class="col-lg-4 col-md-12">
-					<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+					<p v-if="lang=='en'"> People who got training into their blood. People who understand that it’s not enough to start in May, 
+						two months before the seaside. People who don’t train just to look good, but are satisfied with their 
+						physical appearance. We know it’s not possible to create a perfect world where everybody would smile and 
+						be happy. That’s why we don’t try to achieve this. However, it is possible to help people to get stronger, 
+						tougher and readier to everything that life brings. That’s why we work on this, every day. 
+					</p>
+					<p v-else>
+						Ljudi kojima je treniranje u krvi. Ljudi koji razumeju da nije dovoljno započeti u maju,
+						dva meseca pre mora. Ljudi koji ne treniraju samo da bi izgledali dobro, ali su zadovoljni svojim
+						fizičkim izgledom. Znamo da nije moguće stvoriti savršen svet u kojem bi se svi osmehivali i 
+						buili srecni. Zato ne pokušavamo to postići. Međutim, moguće je pomoći ljudima da ojačaju,
+						čvršće i čitljivije za sve što život donosi. Zato radimo na tome, svaki dan.
+					</p>
 				</div>
 			</div>
 			<div class="row">
@@ -28,16 +41,27 @@
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<h2>
-						Our Achievements
-					</h2>
+					<h2 v-if="lang=='en'"> Our Achievements </h2>
+					<h1 v-else> Nasi uspesi </h1>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-8 col-md-12">
+				<div class="col-lg-8 col-md-12 uros">
+					<img src="../../public/img/Achievments.jpg">
 				</div>
 				<div class="col-lg-4 col-md-12 team">
-					<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+					<p v-if="lang=='en'">
+						Our team of professional atheletes have won many challanges and 
+						competitions such as the Belgrade Marathon and Weight lifting to gain awareness 
+						for breast cancer but most notable of all is our colleagues triumphant Cointoss 
+						Olympic Award.
+						</p>
+					<p v-else>
+						Naš tim profesionalnih atletičara osvojio je brojne nagrade i takmičenja kao što su 
+						Beogradski maraton i dizanje tegova radi sticanja svesti za karcinomu dojke, ali 
+						najznačajniji od svih je nagrada našeg kolega koji je osvojio Olimpijsku nagradu za
+						bacanje novcica.
+					</p>
 				</div>
 			</div>
 			<div class="row">
@@ -47,9 +71,8 @@
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<h2>
-						Where to Find Us
-					</h2>
+					<h2 v-if="lang=='en'"> Where to Find Us </h2>
+					<h1 v-else> Gde se nalazimo </h1>
 				</div>
 			</div>
 			<div class="row">
@@ -62,13 +85,23 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12 text-left">
-					<h3> Contact: </h3>
-					<p>
+					<h3 v-if="lang=='en'"> Contact: </h3>
+					<h3 v-else> Kontakt: </h3>
+					
+					<p  v-if="lang=='en'">
 						Have any questions, call here:
 						<a href="tel:01234567890">01234 567 890</a>
 					</p>
-					<p>
+					<p v-else>
+						Za vise pitanja, pozovite broj: 
+						<a href="tel:01234567890">01234 567 890</a>
+					</p>
+					<p v-if="lang=='en'">
 						Or e-mail us at:
+						<a href="mailto:johndoe@lorem.ips">johndoe@lorem.ips</a>
+					</p>
+					<p v-else>
+						Ili nam posaljite e-mail na adresu:
 						<a href="mailto:johndoe@lorem.ips">johndoe@lorem.ips</a>
 					</p>
 				</div>
@@ -79,9 +112,11 @@
 
 <script>
 export default {
-	name: 'HelloWorld',
-	props: {
-		msg: String
+	name: 'About',
+	created(){      
+        if(localStorage.getItem('lang')!=null){
+            this.lang = localStorage.getItem('lang');
+		}
 	}
 }
 </script>
@@ -89,14 +124,14 @@ export default {
 <style>
 
 .about h1 {
-	color: #72D0F4;
+	color: black;
 	padding-top: 20px;
 	font-size: 4.0em;
 }
 
 .about h2 {
 	text-align: left;
-	color: #00BFF0;
+	color: black;
 	font-size: 3.0em;
 }
 
@@ -109,8 +144,17 @@ export default {
 .team{
 	background-color: #00BFF0;
 	border-radius : 10px;
-	opacity: 50%;
-	color: white;
+	color: black;
+}
+
+.team img{
+	width: 100%;
+	height: 100%;
+}
+
+.uros img{
+	width: 100%;
+	height: 100%;
 }
 
 #mapDiv {
