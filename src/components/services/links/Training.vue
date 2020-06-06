@@ -41,9 +41,9 @@ export default {
             this.lang = localStorage.getItem('lang');
         }
 
-        this.text = " Pre" + this.training.type + "Posle"
-                this.training.subtype +
-                this.training.rating;
+        this.text = [this.training.type ,
+                this.training.subtype,
+                this.training.rating];
     },
     data(){
         return{

@@ -1,5 +1,5 @@
 <template>
-        <Linkube img="Massage.jpg" link="/massage" text="Massage"/>
+        <Linkube img="Massage.jpg" link="/massage" :text=title />
 </template>
 
 <script>
@@ -8,6 +8,11 @@ export default {
     name:'MassageLink',
     components:{
         Linkube
+    },
+    data(){
+        return{
+            title: ["Massage"]
+        }
     }
 }
 </script>
