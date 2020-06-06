@@ -2,13 +2,11 @@
     <div class='training'>
         <div >
             <div v-if="lang=='en'">
-                <Linkube img="Massage.jpg" :link="/training/+training.id" :text=text />
+                <Linkube :img=training.pictures :link="/trainingdetails/+training.id" :text=text />
                 
             </div>
             <div v-else>
-                <h3>{{training.alttype}}</h3>
-                <h5>{{training.altsubtype}}</h5>
-                <h5>{{training.rating}}</h5>
+                <Linkube :img=training.pictures :link="/trainingdetails/+training.id" :text=alttext />
             </div>
         </div>
     </div>
@@ -43,6 +41,9 @@ export default {
 
         this.text = [this.training.type ,
                 this.training.subtype,
+                this.training.rating];
+        this.alttext =  [this.training.alttype ,
+                this.training.altsubtype,
                 this.training.rating];
     },
     data(){

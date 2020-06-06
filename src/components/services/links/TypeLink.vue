@@ -1,16 +1,16 @@
 <template>
 	<div class='row'>
 		<div class='col-3'>
-			<Linkube img="Meditation.jpg" link="/yoga/+Yoga" :text=titleY />
+			<Linkube img="Meditation.jpg" :link="/yoga/+Yoga" :text=titleY />
 		</div>
 		<div class='col-3'>
-			<Linkube img="ClassicPilates.jpg" link="/pilates/+Pilates" :text=titleP />
+			<Linkube img="ClassicPilates.jpg" :link="/pilates/+Pilates" :text=titleP />
 		</div>
 		<div class='col-3'>
-			<Linkube img="Nutri.jpg" link="/core/+Core" :text=titleCo />
+			<Linkube img="Core.jpg" :link="/core/+Core" :text=titleCo />
 		</div>
 		<div class='col-3'>
-			<Linkube img="tabata.jpg" link="/core/+Cardio" :text=titleCa />
+			<Linkube img="Cardio.png" :link="/core/+Cardio" :text=titleCa />
 		</div>
 	</div>
 </template>

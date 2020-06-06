@@ -102,9 +102,24 @@ export default {
 	},
 	created: function(){
         this.filter=this.$route.params.type;
-	},
+        
+        this.filter=this.$route.params.type;
+        if(this.filter == null || this.filter == "undefined"){
+                console.log(this.filter);
+            this.items=this.allItems;
+        }
+        else{
+            this.items=[];
+            
+            for(let i = 0; i<this.allItems.length; i++){
+                if(this.allItems[i].type == this.filter)
+                    this.items.push(this.allItems[i]);
+            }
+        }
+},
 	methods:{
 		check: function(){
+            this.filter=this.$route.params.type;
 			if(this.filter == null || this.filter == "undefined"){
 				return false;
 			}
@@ -117,7 +132,7 @@ export default {
 		}
 	},
 	updated: function(){
-        this.filter=this.$route.params.filter;
+        this.filter=this.$route.params.type;
 	},
 	data: function(){
 		return{
@@ -126,21 +141,6 @@ export default {
 			allItems: progs
 		}
 	},
-	watch: {
-		'$route' () {
-			this.filter=this.$route.params.filter;
-			if(this.filter == null || this.filter == "undefined"){
-				this.items=this.allItems;
-			}
-			else{
-				this.items=[];
-				for(let i = 0; i<this.allItems.length; i++){
-					if(this.allItems[i].type == this.filter)
-						this.items.push(this.allItems[i]);
-				}
-			}
-		}
-
-	}
 }
 </script>
+ 
