@@ -7,7 +7,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 3.4,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -19,7 +19,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.0,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -31,7 +31,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.2,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -43,7 +43,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.8,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -55,7 +55,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 3.7,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -67,7 +67,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.5,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -79,7 +79,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 5.0,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -91,7 +91,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.4,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -103,7 +103,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.2,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -115,7 +115,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.3,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -127,7 +127,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 3.7,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },
@@ -139,7 +139,7 @@ const programs = [
         altsubtype: 'Meditacija',
         difficulty: "",
         rating: 4.9,
-        pictures: 'usce.jpg',
+        pictures: 'biospajz.png',
         video: '',
         comments: ''
     },

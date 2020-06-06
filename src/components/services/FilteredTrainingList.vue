@@ -8,8 +8,8 @@
 					</div>
 				</div>
 				<div class="row links">
-					<div v-for="item in items" class="col-4" :key=item>
-						<Linkube :text=item img="insta.jpg" link="/helo" />
+					<div v-for="item in items" class="col-4" :key=item.id>
+						<Linkube :text=item.type :img=item.pictures link="/helo" />
 					</div>
 				</div>
 				<div class="row gap">
@@ -27,8 +27,8 @@
 					</div>
 				</div>
 				<div class="row links">
-					<div v-for="item in allItems" class="col-3" :key=item>
-						<Linkube :text=item img="insta.jpg" link="/helo" />
+					<div v-for="item in allItems" class="col-3" :key=item.id>
+						<Linkube :text=item.type :img=item.pictures link="/helo" />
 					</div>
 				</div>
 				<div class="row gap">
@@ -52,6 +52,7 @@
 
 <script>
 import Linkube from '../Linkube.vue'
+import progs from '../data/programs.js'
 
 export default {
 	name: 'FilteredTrainingList',
@@ -77,13 +78,23 @@ export default {
 	data: function(){
 		return{
 			filter: 0,
-			items: [1,2,3],
-			allItems: [1,2,3,4,5,6]
+			items: progs,
+			allItems: progs
 		}
 	},
 	watch: {
 		'$route' () {
 			this.filter=this.$route.params.filter;
+			if(this.filter == null || this.filter == "undefined"){
+				this.items=this.allItems;
+			}
+			else{
+				this.items=[];
+				for(let i = 0; i<this.allItems.length; i++){
+					if(this.allItems[i].type == this.filter)
+						this.items.push(this.allItems[i]);
+				}
+			}
 		}
 
 	}
