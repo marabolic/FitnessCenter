@@ -11,7 +11,7 @@
 				</div>
 				<div class="row links">
 					<div v-for="item in items" class="col-12 col-sm-6 col-md-4" :key=item.id>
-						<Linkube :text=makeText(item) :img=item.pictures :link="/weekly/+item.id" />
+						<Linkube :text=makeText(item) :img=item.pictures :link="/trainingdetails/+item.id" />
 					</div>
 				</div>
 				<div class="row gap">
@@ -30,7 +30,7 @@
 				</div>
 				<div class="row links">
 					<div v-for="item in allItems" class="col-12 col-sm-6 col-md-4" :key=item.id>
-						<Linkube :text=makeText(item) :img=item.pictures :link="/weekly/+item.id" />
+						<Linkube :text=makeText(item) :img=item.pictures :link="/trainingdetails/+item.id" />
 					</div>
 				</div>
 				<div class="row gap">
