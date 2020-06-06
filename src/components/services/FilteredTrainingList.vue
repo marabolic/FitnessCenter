@@ -9,7 +9,7 @@
 				</div>
 				<div class="row links">
 					<div v-for="item in items" class="col-4" :key=item.id>
-						<Linkube :text=item.type :img=item.pictures link="/helo" />
+						<Linkube :text=makeText(item) :img=item.pictures link="/helo" />
 					</div>
 				</div>
 				<div class="row gap">
@@ -28,7 +28,7 @@
 				</div>
 				<div class="row links">
 					<div v-for="item in allItems" class="col-3" :key=item.id>
-						<Linkube :text=item.type :img=item.pictures link="/helo" />
+						<Linkube :text=makeText(item) :img=item.pictures link="/helo" />
 					</div>
 				</div>
 				<div class="row gap">
@@ -46,12 +46,13 @@
 	height: 35px;
 }
 .links > *{
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 </style>
 
 <script>
-import Linkube from '../Linkube.vue'
+import Linkube from '../services/links/Linkube.vue'
 import progs from '../data/programs.js'
 
 export default {
@@ -70,6 +71,9 @@ export default {
 			else{
 				return true;
 			}
+		},
+		makeText: function(item){
+			return [item.type, item.subtype]
 		}
 	},
 	updated: function(){
