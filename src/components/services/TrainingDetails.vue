@@ -205,11 +205,17 @@
         </div>
 
         <h5 v-if="lang=='en'"> 
-            Video gallery: {{training.video}}
+            Video gallery:
+            
         </h5>
         <h3 v-else> 
-            Video galerija: {{training.video}}
+            Video galerija: 
         </h3>
+        <div>
+            <iframe width="560" height="315" :src=training.video frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
         <h5 v-if="lang=='en'">
             Comments:{{training.comments}}
         </h5>
@@ -246,8 +252,8 @@ export default {
             trainings: trainings,
             first: "",
             second: "",
-            third: ""
-
+            third: "",
+            video: ""
         }
     },
     created(){      

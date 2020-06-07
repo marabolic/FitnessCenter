@@ -12,8 +12,8 @@ const programs = [
 		picS: 'Meditation2.jpg',
 		picT: 'Meditation3.jpg',
 			
-        video: '',
-        comments: '',
+		video: "https://www.youtube.com/embed/4pLUleLdwY4",
+       
 		terms: [
 			{
 				id: 0,
@@ -58,7 +58,7 @@ const programs = [
 		picS: 'vinyasaYoga2.jpg',
 		picT: 'vinyasaYoga3.jpg',
 		
-        video: '',
+		video: "https://www.youtube.com/embed/9kOCY0KNByw",
         comments: '',
 		terms: [
 			{
@@ -104,7 +104,7 @@ const programs = [
 		picS: 'HathaYoga2.jpg',
 		picT: 'HathaYoga3.jpg',
 			
-        video: '',
+        video: "https://www.youtube.com/embed/GWg-siH2VEA",
         comments: '',
 		terms: [
 			{
@@ -150,7 +150,7 @@ const programs = [
 		picS: 'ClassicPilates2.jpg',
 		picT: 'ClassicPilates3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/Itui6v6nRYI",
         comments: '',
 		terms: [
 			{
@@ -196,7 +196,7 @@ const programs = [
 		picS: 'StotPilates2.jpg',
 		picT: 'StotPilates3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/ZbGMaIkHrw8",
         comments: '',
 		terms: [
 			{
@@ -242,7 +242,7 @@ const programs = [
 		picS: 'ReformerPilates2.jpg',
 		picT: 'ReformerPilates3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/M43CvYO3EOw",
         comments: '',
 		terms: [
 			{
@@ -288,8 +288,8 @@ const programs = [
 		picS: 'Core2.jpg',
 		picT: 'Core3.jpg',
 		
-        video: '4',
-        comments: '',
+        video: "https://www.youtube.com/embed/dJlFmxiL11s",
+        comments: "",
 		terms: [
 			{
 				id: 0,
@@ -334,7 +334,7 @@ const programs = [
 		picS: 'GluteCore2.jpg',
 		picT: 'GluteCore3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/ApWl8QR7EeA",
         comments: '',
 		terms: [
 			{
@@ -380,7 +380,7 @@ const programs = [
 		picS: 'BodyPump2.jpg',
 		picT: 'BodyPump3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/z4JDrD1mGjA" ,
         comments: '',
 		terms: [
 			{
@@ -426,7 +426,7 @@ const programs = [
 		picS: 'CardioBox2.jpg',
 		picT: 'CardioBox3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/yVrcrOMWdMY",
         comments: '',
 		terms: [
 			{
@@ -472,7 +472,7 @@ const programs = [
 		picS: 'tabata2.jpg',
 		picT: 'tabata3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/kTvHJe6_h1c",
         comments: '',
 		terms: [
 			{
@@ -515,10 +515,10 @@ const programs = [
         rating: 4.3,
 		pictures: 'SpinBurn.png',
 		picF: 'SpinBurn.png',
-		picS: 'SpinBurn2.webp',
+		picS: 'SpinBurn2.jpg',
 		picT: 'SpinBurn3.jpg',
 		
-        video: '',
+        video: "https://www.youtube.com/embed/xal93B_vS88",
         comments: '',
 		terms: [
 			{
