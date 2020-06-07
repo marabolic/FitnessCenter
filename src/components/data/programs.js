@@ -13,7 +13,14 @@ const programs = [
 		picT: 'Meditation3.jpg',
 			
 		video: "https://www.youtube.com/embed/4pLUleLdwY4",
-       
+		comments: [
+			{
+				com: "Odlican program, veoma opustajuci",
+			},
+			{
+				com: "Dosadno, samo sedis"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -59,7 +66,14 @@ const programs = [
 		picT: 'vinyasaYoga3.jpg',
 		
 		video: "https://www.youtube.com/embed/9kOCY0KNByw",
-        comments: '',
+        comments: [
+			{
+				com: "Veoma zahtevne i zanimljive poze, jedva cekam sledeci trening",
+			},
+			{
+				com: "Fenomenalna atmosfera, prosto osetis chi kako leti oko tebe"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -105,7 +119,14 @@ const programs = [
 		picT: 'HathaYoga3.jpg',
 			
         video: "https://www.youtube.com/embed/GWg-siH2VEA",
-        comments: '',
+        comments: [
+			{
+				com: "Veoma opustajuce, guru master life coach yoda sensei je odlicna",
+			},
+			{
+				com: "Oss"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -151,7 +172,14 @@ const programs = [
 		picT: 'ClassicPilates3.jpg',
 		
         video: "https://www.youtube.com/embed/Itui6v6nRYI",
-        comments: '',
+        comments: [
+			{
+				com: "One lopte su super bas xP",
+			},
+			{
+				com: "Super je trenerka"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -197,7 +225,14 @@ const programs = [
 		picT: 'StotPilates3.jpg',
 		
         video: "https://www.youtube.com/embed/ZbGMaIkHrw8",
-        comments: '',
+        comments: [
+			{
+				com: "Zanimljive su vezbice sa jastucima, al malo smrde",
+			},
+			{
+				com: "Super program! ^_^"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -243,7 +278,14 @@ const programs = [
 		picT: 'ReformerPilates3.jpg',
 		
         video: "https://www.youtube.com/embed/M43CvYO3EOw",
-        comments: '',
+        comments: [
+			{
+				com: "Sve pohvale za program",
+			},
+			{
+				com: "Naporni i zahtevni treninzi, treneri su super"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -289,7 +331,14 @@ const programs = [
 		picT: 'Core3.jpg',
 		
         video: "https://www.youtube.com/embed/dJlFmxiL11s",
-        comments: "",
+        comments: [
+			{
+				com: "Super je",
+			},
+			{
+				com: "Odlican program"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -335,7 +384,14 @@ const programs = [
 		picT: 'GluteCore3.jpg',
 		
         video: "https://www.youtube.com/embed/ApWl8QR7EeA",
-        comments: '',
+        comments: [
+			{
+				com: "Super je :)",
+			},
+			{
+				com: "Tezak ali zato i daje rezultate ;)"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -381,7 +437,14 @@ const programs = [
 		picT: 'BodyPump3.jpg',
 		
         video: "https://www.youtube.com/embed/z4JDrD1mGjA" ,
-        comments: '',
+        comments: [
+			{
+				com: "Dobar je",
+			},
+			{
+				com: "Jako tesko"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -427,7 +490,14 @@ const programs = [
 		picT: 'CardioBox3.jpg',
 		
         video: "https://www.youtube.com/embed/yVrcrOMWdMY",
-        comments: '',
+        comments: [
+			{
+				com: "Jako glupo, pre bih isla na pravi borilacki sport",
+			},
+			{
+				com: "Najbolje sto sam trenirala do sad, super je ekipa i dobri trneeri"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -473,7 +543,14 @@ const programs = [
 		picT: 'tabata3.jpg',
 		
         video: "https://www.youtube.com/embed/kTvHJe6_h1c",
-        comments: '',
+        comments: [
+			{
+				com: "Odlican program",
+			},
+			{
+				com: "Noge me bole vec 4 dana koliko smo skakali"
+			}
+		],
 		terms: [
 			{
 				id: 0,
@@ -519,7 +596,14 @@ const programs = [
 		picT: 'SpinBurn3.jpg',
 		
         video: "https://www.youtube.com/embed/xal93B_vS88",
-        comments: '',
+        comments: [
+			{
+				com: "Sprave su vrhunske i treneri znaju da te bodre da ne odustajes",
+			},
+			{
+				com: "Super je ekipa"
+			}
+		],
 		terms: [
 			{
 				id: 0,
