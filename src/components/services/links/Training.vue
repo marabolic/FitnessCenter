@@ -41,10 +41,12 @@ export default {
 
         this.text = [this.training.type ,
                 this.training.subtype,
-                this.training.rating];
+                "rating " + this.training.rating,
+                this.training.duration + "min"];
         this.alttext =  [this.training.alttype ,
                 this.training.altsubtype,
-                this.training.rating];
+                this.training.rating,
+                this.training.duration + "min"];
     },
     data(){
         return{
