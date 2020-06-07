@@ -219,11 +219,49 @@
         </div>
 
         <h5 v-if="lang=='en'">
-            Comments:{{training.comments}}
+            Comments:
         </h5>
         <h3 v-else>  
-            Komentari: {{training.coments}}
+            Komentari: 
         </h3>
+
+
+        <div class = 'row'>
+            <div class ='col-6 offset-3'>
+                <div class="comment" v-for='comm in fixedComments' :key="comm">
+                    <div>
+                        {{comm}}
+                    </div>
+                    <div class="col-3 offset-8">
+                        ~Anon
+                    </div>
+                </div>
+                <div class="comment" v-for='comm in commentsForType' :key="comm.id">
+                    <div>
+                        {{comm}}
+                    </div>
+                    <div class="col-3 offset-8">
+                        ~Anon
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='comments'>
+            <form>
+                <table>                           
+                    <tr>
+                        <td>
+                            <textarea id="mycomment" v-model="mycomment" rows="2" cols="50"> </textarea>
+                        </td>
+                        <td>
+                            <button type="submit" @click="addComment" class='btn btn-outline-dark'>Add Comment</button>
+                        </td>
+                    </tr>
+                   
+                </table>
+            </form>
+            </div>
     </div>
   
 </template>
@@ -238,6 +276,18 @@
     .star img{
         height: 3%;
         width: 3%;
+    }
+    .comments{
+		display: flex;
+		justify-content: center;
+	}
+
+    .comment{
+        background-color: skyblue;
+        margin-bottom: 5px;
+        border: double;
+        
+        
     }
 
 </style>
@@ -255,7 +305,10 @@ export default {
             first: "",
             second: "",
             third: "",
-            video: ""
+            video: "",
+            mycomment: "",
+            commentsForType: [],
+            fixedComments: []
         }
     },
     created(){      
@@ -274,7 +327,61 @@ export default {
         this.first = this.training.picF;
         this.second = this.training.picS;
         this.third = this.training.picT;
+        
+        for(let i = 0; i < this.training.comments.length; i++){
+            this.fixedComments.push(this.training.comments[i].com);
+        }
+        console.log("ovde");    
+        console.log(this.fixedComments);
+
+        this.getComments();
         //console.log(this.training);
+    },
+    methods:{
+        addComment(){
+            let myid = Number(this.$route.params.id);
+            let temp_train = this.trainings.find(
+                training=>training.id==myid
+            );
+            this.training = temp_train;
+
+            let comments = localStorage.getItem('comments');
+            if (comments == null || comments == 'undefined'){
+                comments = [];
+            }
+            else{
+                comments = JSON.parse(comments);
+            }
+            comments.push({id: myid, comment: this.mycomment});
+            localStorage.setItem('comments', JSON.stringify(comments));
+            this.commentsForType.push(this.mycomment);
+
+            document.getElementById("mycomment").value = "";
+            this.$forceUpdate();
+
+        },
+        getComments(){
+            this.commentsForType = []
+
+            let comments = localStorage.getItem('comments');
+            if (comments == null || comments == 'undefined'){
+                comments = [];
+            }
+            else{
+                comments = JSON.parse(comments);
+
+                let myid = Number(this.$route.params.id);
+
+                for (let i = 0; i < comments.length; i++){
+                    if (comments[i].id == myid){
+                        this.commentsForType.push(comments[i].comment);
+
+                    }
+                }
+            }
+
+            
+        }
     }
 }
 </script>
