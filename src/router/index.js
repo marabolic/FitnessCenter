@@ -9,6 +9,7 @@ import TrainingType from '../components/services/TrainingType'
 import TrainingDetails from '../components/services/TrainingDetails.vue'
 import Reservation from '../views/Reservation.vue'
 import Weekly from '../views/Weekly.vue'
+import MyAccount from '../views/MyAccount.vue'
 
 Vue.use(VueRouter)
 
@@ -86,6 +87,11 @@ const routes = [
 		path: '/weekly/:id',
 		name: 'Weekly',
 		component: Weekly
+	},
+	{
+		path: '/account',
+		name: 'MyAccount',
+		component: MyAccount
 	},
 
 
