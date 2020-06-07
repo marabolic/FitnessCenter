@@ -107,17 +107,11 @@ export default {
 	},
 	created: function(){
 		this.lang = localStorage.getItem('lang');
-		this.reserved = JSON.parse(localStorage.getItem('reserved'));
-		let reserved = this.reserved;
-		let r = !(reserved == null || reserved == "undefined")
 		this.id = this.$route.params.id;
 		let id = this.id;
 		for(let i = 0; i < progs.length; i++){
 			for(let j = 0; j < progs[i].terms.length; j++){
 				if(id==progs[i].id){
-					if(r && this.reserved.find(res => (res.id == id && 
-						res.termid == progs[i].terms[j].id)))
-						progs[i].terms[j].left -= 1;
 					this.terms[progs[i].terms[j].day].push(progs[i].terms[j]);
 				}
 			}

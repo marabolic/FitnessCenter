@@ -4,12 +4,21 @@
 			<div class="col-12">
 				<div class="row">
 					<div class="col-12">
-						{{timeTxt}}: {{myterm.hour}}:{{myterm.min}}
+						{{myTren}}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-12">
-						{{leftTxt}}: {{myterm.left}}
+						{{mySub}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						{{timeTxt}}: {{myterm.hour}}:{{myterm.min}}
+					</div>
+				</div>
+				<div class="row"> <div class="col-12">
+						{{leftTxt}}: {{left}}
 					</div>
 				</div>
 				<div v-if="showBtn()" class="row">
@@ -46,6 +55,7 @@
 </style>
 
 <script>
+import progs from "../data/programs.js"
 
 export default {
 	name: "TermBox",
@@ -55,6 +65,11 @@ export default {
 		this.myterm = this.term;
 		let lang = localStorage.getItem("lang");
 		this.trenid = this.id;
+		if(this.isReserved())
+			this.left = this.myterm.left - 1;
+		else
+			this.left = this.myterm.left;
+
 		if(lang == null || lang == "undefined"){
 			lang = "sr";
 		}
@@ -72,6 +87,18 @@ export default {
 			this.timeTxt = "Vreme";
 			this.leftTxt = "Preostalo";
 		}
+		for(let i = 0; i < progs.length; i++){
+			if(progs[i].id == this.id){
+				if(lang=="en"){
+					this.myTren = progs[i].type;
+					this.mySub =  progs[i].subtype;
+				}
+				else{
+					this.myTren = progs[i].alttype;
+					this.mySub =  progs[i].altsubtype;
+				}
+			}
+		}
 	},
 	props: [
 		"term",
@@ -83,6 +110,9 @@ export default {
 			btnText1: "",
 			btnText2: "",
 			trenid: 0,
+			left: 0,
+			myTren:0,
+			mySub: 0
 		}
 	},
 	methods:{
@@ -159,7 +189,7 @@ export default {
 			reserved.push({id: this.trenid, termid: this.myterm.id, time: timest});
 			reserved = JSON.stringify(reserved);
 			localStorage.setItem('reserved', reserved);
-			this.myterm.left-=1;
+			this.left-=1;
 			this.$forceUpdate();
 		},
 		redBtnClick: function(){
@@ -175,7 +205,7 @@ export default {
 			}
 			reserved = JSON.stringify(reserved);
 			localStorage.setItem('reserved', reserved);
-			this.myterm.left+=1;
+			this.left+=1;
 			this.$forceUpdate();
 		},
 	}
