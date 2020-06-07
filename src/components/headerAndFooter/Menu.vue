@@ -8,7 +8,7 @@
 				</div>
 				<nav class="navbar navbar-expand-lg navbar-light bg-light">
 					<router-link to="/">
-						<a class="navbar-brand">Navbar</a>
+						<a class="navbar-brand">Pilav</a>
 					</router-link>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -102,6 +102,14 @@
 		</div>
 </template>
 
+
+<style>
+	.menu img{
+		height: 6%;
+		width: 6%;
+	}
+
+</style>
 
 <script>
 export default {
