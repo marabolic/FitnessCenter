@@ -247,7 +247,7 @@
             </div>
         </div>
 
-        <div class='comments'>
+        <div v-if="check()" class='comments'>
             <form>
                 <table>                           
                     <tr>
@@ -261,7 +261,7 @@
                    
                 </table>
             </form>
-            </div>
+		</div>
     </div>
   
 </template>
@@ -354,6 +354,8 @@ export default {
     },
     methods:{
         addComment(){
+			if(!this.check())
+				return;
             let myid = Number(this.$route.params.id);
             let temp_train = this.trainings.find(
                 training=>training.id==myid
@@ -400,7 +402,25 @@ export default {
             //}
             
         },
+		check(){
+            let myid = Number(this.$route.params.id);
+			var attended = localStorage.getItem("attended");
+			if(attended == null || attended == "undefined"){
+				attended = []
+			}
+			else{
+				attended = JSON.parse(attended);
+			}
+			for(let i = 0; i < attended.length; i++){
+				if(attended[i].id == myid){
+					return true;
+				}
+			}
+			return false;
+		},
         oneStar(){
+			if(!this.check())
+				return;
             console.log("one");
             this.training.rating = 1;
             let myid = Number(this.$route.params.id);
@@ -418,6 +438,8 @@ export default {
             this.$forceUpdate();
         },
         twoStar(){
+			if(!this.check())
+				return;
             console.log("two");
             this.training.rating = 2;
             let myid = Number(this.$route.params.id);
@@ -433,6 +455,8 @@ export default {
             this.$forceUpdate();
         },
         threeStar(){
+			if(!this.check())
+				return;
             console.log("three");
             this.training.rating = 3;
             let myid = Number(this.$route.params.id);
@@ -450,6 +474,8 @@ export default {
             this.$forceUpdate();
         },
         fourStar(){
+			if(!this.check())
+				return;
             console.log("four");
             this.training.rating = 4;
             let myid = Number(this.$route.params.id);
@@ -467,6 +493,8 @@ export default {
             this.$forceUpdate();
         },
         fiveStar(){
+			if(!this.check())
+				return;
             console.log("five");
             this.training.rating = 5;
             let myid = Number(this.$route.params.id);

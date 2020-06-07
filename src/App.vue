@@ -151,10 +151,12 @@ export default {
 				if(now.getTime() > res[i].time){
 					r = res[i];
 					res.splice(i,1);
+					console.log("fdsf");
 					attended.push(r);
 				}
 			}
 			localStorage.setItem("attended", JSON.stringify(attended));
+			localStorage.setItem("reserved", JSON.stringify(res));
 		}
 	}
 }
