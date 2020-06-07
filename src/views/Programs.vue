@@ -12,6 +12,6 @@
         name:'Programs',
         components:{
             TrainingList
-        }
+        },
     }
 </script>

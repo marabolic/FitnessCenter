@@ -126,6 +126,7 @@ export default {
 				}
 			}
 		}
+
 	}
 	,
 	data: function(){

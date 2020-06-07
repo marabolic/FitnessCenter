@@ -35,6 +35,6 @@
                 TypeLink,
                 MassageLink,
                 NutritionistLink
-            }
+            },
     }
 </script>
