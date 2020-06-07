@@ -5,11 +5,15 @@ const programs = [
         alttype: 'Joga',
         subtype: 'Meditation',
         altsubtype: 'Meditacija',
-        difficulty: "1",
+        difficulty: 1,
         rating: 3.4,
-        pictures: 'Meditation.jpg',
-        video: '',
-        comments: '',
+		pictures: 'Meditation.jpg',
+		picF: 'Meditation.jpg',
+		picS: 'Meditation2.jpg',
+		picT: 'Meditation3.jpg',
+			
+		video: "https://www.youtube.com/embed/4pLUleLdwY4",
+       
 		terms: [
 			{
 				id: 0,
@@ -47,10 +51,14 @@ const programs = [
         alttype: 'Joga',
         subtype: 'Vinyasa Yoga',
         altsubtype: 'Vinyasa Yoga',
-        difficulty: "3",
+        difficulty: 3,
         rating: 4.0,
-        pictures: 'vinyasaYoga.jpg',
-        video: '',
+		pictures: 'vinyasaYoga.jpg',
+		picF: 'vinyasaYoga.jpg',
+		picS: 'vinyasaYoga2.jpg',
+		picT: 'vinyasaYoga3.jpg',
+		
+		video: "https://www.youtube.com/embed/9kOCY0KNByw",
         comments: '',
 		terms: [
 			{
@@ -89,10 +97,14 @@ const programs = [
         alttype: 'Joga',
         subtype: 'Hatha Yoga',
         altsubtype: 'Hatha Joga',
-        difficulty: "2",
+        difficulty: 2,
         rating: 4.2,
-        pictures: 'HathaYoga.jpg',
-        video: '',
+		pictures: 'HathaYoga.jpg',
+		picF: 'HathaYoga.jpg',
+		picS: 'HathaYoga2.jpg',
+		picT: 'HathaYoga3.jpg',
+			
+        video: "https://www.youtube.com/embed/GWg-siH2VEA",
         comments: '',
 		terms: [
 			{
@@ -131,10 +143,14 @@ const programs = [
         alttype: 'Pilates',
         subtype: 'Classic Pilates',
         altsubtype: 'Klasicni Pilates',
-        difficulty: "",
+        difficulty: 3,
         rating: 4.8,
-        pictures: 'ClassicPilates.jpg',
-        video: '',
+		pictures: 'ClassicPilates.jpg',
+		picF: 'ClassicPilates.jpg',
+		picS: 'ClassicPilates2.jpg',
+		picT: 'ClassicPilates3.jpg',
+		
+        video: "https://www.youtube.com/embed/Itui6v6nRYI",
         comments: '',
 		terms: [
 			{
@@ -173,10 +189,14 @@ const programs = [
         alttype: 'Pilates',
         subtype: 'Stott Pilates',
         altsubtype: 'Stot Pilates',
-        difficulty: "",
+        difficulty: 4,
         rating: 3.7,
-        pictures: 'StotPilates.jpg',
-        video: '',
+		pictures: 'StotPilates.jpg',
+		picF: 'StotPilates.jpg',
+		picS: 'StotPilates2.jpg',
+		picT: 'StotPilates3.jpg',
+		
+        video: "https://www.youtube.com/embed/ZbGMaIkHrw8",
         comments: '',
 		terms: [
 			{
@@ -215,10 +235,14 @@ const programs = [
         alttype: 'Pilates',
         subtype: 'Reformer Pilates',
         altsubtype: 'Reformer Pilates',
-        difficulty: "",
+        difficulty: 4,
         rating: 4.5,
-        pictures: 'ReformerPilates.jpg',
-        video: '',
+		pictures: 'ReformerPilates.jpg',
+		picF: 'ReformerPilates.jpg',
+		picS: 'ReformerPilates2.jpg',
+		picT: 'ReformerPilates3.jpg',
+		
+        video: "https://www.youtube.com/embed/M43CvYO3EOw",
         comments: '',
 		terms: [
 			{
@@ -257,11 +281,15 @@ const programs = [
         alttype: 'Kor',
         subtype: 'Classic Core',
         altsubtype: 'Klasicni Kor',
-        difficulty: "",
+        difficulty: 4,
         rating: 5.0,
-        pictures: 'Core.jpg',
-        video: '4',
-        comments: '',
+		pictures: 'Core.jpg',
+		picF: 'Core.jpg',
+		picS: 'Core2.jpg',
+		picT: 'Core3.jpg',
+		
+        video: "https://www.youtube.com/embed/dJlFmxiL11s",
+        comments: "",
 		terms: [
 			{
 				id: 0,
@@ -299,10 +327,14 @@ const programs = [
         alttype: 'Kor',
         subtype: 'Glute and Core',
         altsubtype: 'Gluteusi i Kor',
-        difficulty: "4",
+        difficulty: 4,
         rating: 4.4,
-        pictures: 'GluteCore.jpg',
-        video: '',
+		pictures: 'GluteCore.jpg',
+		picF: 'GluteCore.jpg',
+		picS: 'GluteCore2.jpg',
+		picT: 'GluteCore3.jpg',
+		
+        video: "https://www.youtube.com/embed/ApWl8QR7EeA",
         comments: '',
 		terms: [
 			{
@@ -341,10 +373,14 @@ const programs = [
         alttype: 'Kor',
         subtype: 'Body Pump',
         altsubtype: 'Bildovanje',
-        difficulty: "5",
+        difficulty: 5,
         rating: 4.2,
-        pictures: 'BodyPump.png',
-        video: '',
+		pictures: 'BodyPump.png',
+		picF: 'BodyPump.png',
+		picS: 'BodyPump2.jpg',
+		picT: 'BodyPump3.jpg',
+		
+        video: "https://www.youtube.com/embed/z4JDrD1mGjA" ,
         comments: '',
 		terms: [
 			{
@@ -383,10 +419,14 @@ const programs = [
         alttype: 'Kardio',
         subtype: 'Cardio Box',
         altsubtype: 'Kardio Boks',
-        difficulty: "3",
+        difficulty: 3,
         rating: 4.3,
-        pictures: 'CardioBox.jpg',
-        video: '',
+		pictures: 'CardioBox.jpg',
+		picF: 'CardioBox.jpg',
+		picS: 'CardioBox2.jpg',
+		picT: 'CardioBox3.jpg',
+		
+        video: "https://www.youtube.com/embed/yVrcrOMWdMY",
         comments: '',
 		terms: [
 			{
@@ -425,10 +465,14 @@ const programs = [
         alttype: 'Kardio',
         subtype: 'Tabata',
         altsubtype: 'Tabata',
-        difficulty: "5",
+        difficulty: 5,
         rating: 3.7,
-        pictures: 'tabata.jpg',
-        video: '',
+		pictures: 'tabata.jpg',
+		picF: 'tabata.jpg',
+		picS: 'tabata2.jpg',
+		picT: 'tabata3.jpg',
+		
+        video: "https://www.youtube.com/embed/kTvHJe6_h1c",
         comments: '',
 		terms: [
 			{
@@ -467,10 +511,14 @@ const programs = [
         alttype: 'Kardio',
         subtype: 'Spin Burn',
         altsubtype: 'Pedalanje',
-        difficulty: "4",
+        difficulty: 4,
         rating: 4.3,
-        pictures: 'SpinBurn.png',
-        video: '',
+		pictures: 'SpinBurn.png',
+		picF: 'SpinBurn.png',
+		picS: 'SpinBurn2.jpg',
+		picT: 'SpinBurn3.jpg',
+		
+        video: "https://www.youtube.com/embed/xal93B_vS88",
         comments: '',
 		terms: [
 			{
