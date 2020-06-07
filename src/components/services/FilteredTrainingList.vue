@@ -73,7 +73,11 @@ export default {
 			}
 		},
 		makeText: function(item){
-			return [item.type, item.subtype]
+			let lang = localStorage.getItem("lang");
+			if(lang == "en")
+				return [item.type, item.subtype]
+			else
+				return [item.alttype, item.altsubtype]
 		}
 	},
 	updated: function(){

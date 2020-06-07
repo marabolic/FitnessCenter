@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <div class="text-right">
+    <div class="htop text-right">
         <a @click="setEn()" href="">
             English
             <img src="../../../public/img/en.png">
@@ -14,6 +14,13 @@
 </div>
 </template>
 
+<style>
+
+.htop a{
+	color: white;
+}
+
+</style>
 
 <script>
 

@@ -13,6 +13,15 @@ export default {
         return{
             title: ["Massage"]
         }
-    }
+    },
+	created: function(){
+		let lang = localStorage.getItem("lang");
+		if(lang == "en"){
+			this.title = ["Massage"];
+		}
+		else{
+			this.title = ["Masaza"];
+		}
+	}
 }
 </script>
