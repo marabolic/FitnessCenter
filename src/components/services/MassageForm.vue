@@ -73,18 +73,34 @@ export default {
     methods:{
         generate(){
             const doc = new jspdf();
-            doc.text("Name: ",15,15);
-            doc.text(this.name, 70, 15);
-            doc.text("Surname: ",15,20);
-            doc.text(this.surname, 70, 20);
-            doc.text("Email: ",15,25);
-            doc.text(this.email, 70, 25);
-            doc.text("Phone Number: ",15,30);
-            doc.text(this.phone, 70, 30);
-            doc.text("Date: ",15,35);
-            doc.text(this.date, 70, 35);
-            doc.text("Description: ",15,40);
-            doc.text(this.description, 70, 40);
+            if (this.lang == "en"){
+                doc.text("Name: ",15,15);
+                doc.text(this.name, 70, 15);
+                doc.text("Surname: ",15,20);
+                doc.text(this.surname, 70, 20);
+                doc.text("Email: ",15,25);
+                doc.text(this.email, 70, 25);
+                doc.text("Phone Number: ",15,30);
+                doc.text(this.phone, 70, 30);
+                doc.text("Date: ",15,35);
+                doc.text(this.date, 70, 35);
+                doc.text("Description: ",15,40);
+                doc.text(this.description, 70, 40);
+            }
+            else{
+				doc.text("Ime: ",15,15);
+                doc.text(this.name, 70, 15);
+                doc.text("Prezime: ",15,20);
+                doc.text(this.surname, 70, 20);
+                doc.text("E-posta: ",15,25);
+                doc.text(this.email, 70, 25);
+                doc.text("Broj telefona: ",15,30);
+                doc.text(this.phone, 70, 30);
+                doc.text("Datum: ",15,35);
+                doc.text(this.date, 70, 35);
+                doc.text("Opis problema: ",15,40);
+                doc.text(this.description, 70, 40);
+			}
             doc.save("MasazaRezervacija.pdf");
         }
     }
