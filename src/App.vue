@@ -6,7 +6,7 @@
 		<div class='menu'>
 			<Menu/>
 			<div class='row'>
-				<div class="offset-2 col-3">
+				<div class="offset-2 col-lg-3 col-md-4 col-sm-5 col-7">
 					<router-view name="crumbs" />
 				</div>
 			</div>
