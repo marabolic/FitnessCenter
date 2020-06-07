@@ -124,5 +124,38 @@ export default {
 			ckey: 0
 		}
 	},
+	mounted: function () {
+		this.$nextTick(function () {
+			window.setInterval(() => {
+				this.countDown();
+			},10000);
+		})
+	},
+	methods: {
+		countDown : function(){
+			var res = localStorage.getItem("reserved");
+			if(res == null || res == "undefined"){
+				return;
+			}
+			var attended = localStorage.getItem("attended");
+			if(attended == null || attended == "undefined"){
+				attended = []
+			}
+			else{
+				attended = JSON.parse(attended);
+			}
+			res = JSON.parse(res);
+			var now = new Date();
+			for(let i = 0; i < res.length; i++){
+				var r = 0;
+				if(now.getTime() > res[i].time){
+					r = res[i];
+					res.splice(i,1);
+					attended.push(r);
+				}
+			}
+			localStorage.setItem("attended", JSON.stringify(attended));
+		}
+	}
 }
 </script>
