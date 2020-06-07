@@ -1,5 +1,5 @@
 <template >
-	<div class="vertical-menu">
+	<div v-if="lang == 'en'" class="vertical-menu">
 		<div v-if="filter == 'Core'">
 			<a class="active">Core</a>
 		</div>
@@ -17,6 +17,32 @@
 		</div>
 		<div v-else>
 			<a @click='go("Yoga")'>Yoga</a>
+		</div>
+		<div v-if="filter == 'Pilates'">
+			<a class="active">Pilates</a>
+		</div>
+		<div v-else>
+			<a @click='go("Pilates")'>Pilates</a>
+		</div>
+	</div> 
+	<div v-else class="vertical-menu">
+		<div v-if="filter == 'Core'">
+			<a class="active">Kor</a>
+		</div>
+		<div v-else>
+			<a @click='go("Core")'>Kor</a>
+		</div>
+		<div v-if="filter == 'Cardio'">
+			<a class="active">Kardio</a>
+		</div>
+		<div v-else>
+			<a @click='go("Cardio")'>Kardio</a>
+		</div>
+		<div v-if="filter == 'Yoga'">
+			<a class="active">Joga</a>
+		</div>
+		<div v-else>
+			<a @click='go("Yoga")'>Joga</a>
 		</div>
 		<div v-if="filter == 'Pilates'">
 			<a class="active">Pilates</a>
@@ -67,10 +93,12 @@ export default {
 	},
 	created: function(){
         this.filter=this.$route.params.filter;
+		this.lang = localStorage.getItem("lang");
 	},
 	data: function(){
 		return{
-			filter: 0
+			filter: 0,
+			lang: 0
 		}
 	},
 	methods:{

@@ -76,7 +76,7 @@
 								</router-link>
 							</li>
 							<li class="nav-item">
-								<router-link to="/about">
+								<router-link to="/account">
 									<div v-if="lang=='en'">
 										<a class="nav-link" href="#">My Account</a>
 									</div>

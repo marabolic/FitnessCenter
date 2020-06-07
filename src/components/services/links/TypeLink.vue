@@ -34,6 +34,21 @@ export default {
 			titleCo: ["Core"],
 			titleCa: ["Cardio"],
 		}
+	},
+	created: function(){
+		let lang = localStorage.getItem("lang");
+		if(lang == "en"){
+			this.titleY = ["Yoga"];
+			this.titleP = ["Pilates"];
+			this.titleCo = ["Core"];
+			this.titleCa = ["Cardio"];
+		}
+		else{
+			this.titleY = ["Joga"];
+			this.titleP = ["Pilates"];
+			this.titleCo = ["Kor"];
+			this.titleCa = ["Kardio"];
+		}
 	}
 
 }

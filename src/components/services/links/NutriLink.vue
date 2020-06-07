@@ -13,6 +13,15 @@ export default {
         return{
             title: ["Nutritionist"]
         }
-    }
+    },
+	created: function(){
+		let lang = localStorage.getItem("lang");
+		if(lang == "en"){
+			this.title = ["Nutritionist"];
+		}
+		else{
+			this.title = ["Nutricionista"];
+		}
+	}
 }
 </script>
