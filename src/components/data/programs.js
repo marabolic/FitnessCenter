@@ -9,7 +9,37 @@ const programs = [
         rating: 3.4,
         pictures: 'Meditation.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 9
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 2
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 5
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 2
+			}
+		]
     },
     {
         id: 2,
@@ -21,7 +51,37 @@ const programs = [
         rating: 4.0,
         pictures: 'vinyasaYoga.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 4
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 4
+			}
+		]
     },
     {
         id: 3,
@@ -33,7 +93,37 @@ const programs = [
         rating: 4.2,
         pictures: 'HathaYoga.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 4
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 2
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 2
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 2
+			}
+		]
     },
     {
         id: 4,
@@ -45,7 +135,37 @@ const programs = [
         rating: 4.8,
         pictures: 'ClassicPilates.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 1
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 0
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 2
+			}
+		]
     },
     {
         id: 5,
@@ -57,7 +177,37 @@ const programs = [
         rating: 3.7,
         pictures: 'StotPilates.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 0
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 4
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 1
+			}
+		]
     },
     {
         id: 6,
@@ -69,7 +219,37 @@ const programs = [
         rating: 4.5,
         pictures: 'ReformerPilates.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 2
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 4
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 2
+			}
+		]
     },
     {
         id: 7,
@@ -81,7 +261,37 @@ const programs = [
         rating: 5.0,
         pictures: 'Core.jpg',
         video: '4',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 7
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 6
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 8
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 2
+			}
+		]
     },
     {
         id: 8,
@@ -93,7 +303,37 @@ const programs = [
         rating: 4.4,
         pictures: 'GluteCore.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 2
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 1
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 1
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 0
+			}
+		]
     },
     {
         id: 9,
@@ -105,7 +345,37 @@ const programs = [
         rating: 4.2,
         pictures: 'BodyPump.png',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 5
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 7
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 7
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 5
+			}
+		]
     },
     {
         id: 10,
@@ -117,7 +387,37 @@ const programs = [
         rating: 4.3,
         pictures: 'CardioBox.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 5
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 5
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 2
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 1
+			}
+		]
     },
     {
         id: 11,
@@ -129,7 +429,37 @@ const programs = [
         rating: 3.7,
         pictures: 'tabata.jpg',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 5
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 4
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 4
+			}
+		]
     },
     {
         id: 12,
@@ -141,7 +471,37 @@ const programs = [
         rating: 4.3,
         pictures: 'SpinBurn.png',
         video: '',
-        comments: ''
+        comments: '',
+		terms: [
+			{
+				id: 0,
+				day: 1,
+				hour: 15,
+				min: 30,
+				left: 5
+			},
+			{
+				id: 1,
+				day: 3,
+				hour: 15,
+				min: 30,
+				left: 3
+			},
+			{
+				id: 2,
+				day: 3,
+				hour: 17,
+				min: 30,
+				left: 4
+			},
+			{
+				id: 3,
+				day: 5,
+				hour: 12,
+				min: 0,
+				left: 3
+			}
+		]
     },
 
 ];
