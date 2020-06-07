@@ -10,6 +10,18 @@ import TrainingDetails from '../components/services/TrainingDetails.vue'
 import Reservation from '../views/Reservation.vue'
 import Weekly from '../views/Weekly.vue'
 import MyAccount from '../views/MyAccount.vue'
+import About from '../views/About.vue'
+import AboutCrumbs from '../components/headerAndFooter/Crumbs/AboutCrumbs.vue'
+import HomeCrumbs from '../components/headerAndFooter/Crumbs/HomeCrumbs.vue'
+import MassageCrumbs from '../components/headerAndFooter/Crumbs/MassageCrumbs.vue'
+import MyAccountCrumbs from '../components/headerAndFooter/Crumbs/MyAccountCrumbs.vue'
+import NutriCrumbs from '../components/headerAndFooter/Crumbs/NutriCrumbs.vue'
+import ProgramsCrumbs from '../components/headerAndFooter/Crumbs/ProgramsCrumbs.vue'
+import ReservationCrumbs from '../components/headerAndFooter/Crumbs/ReservationCrumbs.vue'
+import ServicesCrumbs from '../components/headerAndFooter/Crumbs/ServicesCrumbs.vue'
+import WeeklyCrumbs from '../components/headerAndFooter/Crumbs/WeeklyCrumbs.vue'
+import TrainingDetailsCrumbs from '../components/headerAndFooter/Crumbs/TrainingDetailsCrumbs.vue'
+import TrainingTypeCrumbs from '../components/headerAndFooter/Crumbs/TrainingTypeCrumbs.vue'
 
 Vue.use(VueRouter)
 
@@ -17,12 +29,18 @@ const routes = [
 	{
 		path: '/',
 		name: 'Home',
-		component: Home
+		components: {
+			default: Home,
+			crumbs: HomeCrumbs
+		}
 	},
 	{
 		path: '/trainingdetails/:id',
 		name:'Details',
-		component: TrainingDetails
+		components: {
+			default: TrainingDetails,
+			crumbs: TrainingDetailsCrumbs
+		}
 	},
 	{
 		path: '/about',
@@ -30,68 +48,107 @@ const routes = [
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
-		component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+		components: {
+			default: About,
+			crumbs: AboutCrumbs
+		}
 	},
 	{
 		path: '/services',
 		name: 'Services',
-		component: Services
+		components: {
+			default: Services,
+			crumbs: ServicesCrumbs
+		}
 	},
 	{
 		path: '/train',
 		name: 'Programs',
-		component: Programs
+		components: {
+			default: Programs,
+			crumbs: ProgramsCrumbs
+		}
 		//component: () => import(/* webpackChunkName: "about" */ '../views/Programs.vue')
 	},
 	{
 		path: '/massage',
 		name: 'Massage',
-		component: Massage
+		components: {
+			default: Massage,
+			crumbs: MassageCrumbs
+		}
 	},
 	{
 		path: '/nutritionist',
 		name: 'Nutritionist',
-		component: Nutritionist
+		components: {
+			default: Nutritionist,
+			crumbs: NutriCrumbs
+		}
 	},
 	{
 		path: '/yoga/:type', 
 		name: 'Yoga',
-		component: TrainingType
+		components: {
+			default: TrainingType,
+			crumbs: TrainingTypeCrumbs
+		}
 	},
 	{
 		path: '/pilates/:type', 
 		name: 'Pilates',
-		component: TrainingType
+		components: {
+			default: TrainingType,
+			crumbs: TrainingTypeCrumbs
+		}
 	},
 	{
 		path: '/core/:type', 
 		name: 'Core',
-		component: TrainingType
+		components: {
+			default: TrainingType,
+			crumbs: TrainingTypeCrumbs
+		}
 	},
 	{
 		path: '/cardio/:type', 
 		name: 'Cardio',
-		component: TrainingType
+		components: {
+			default: TrainingType,
+			crumbs: TrainingTypeCrumbs
+		}
 	},
 	{
 		path: '/reservation/:filter',
 		name: 'Reservation',
-		component: Reservation
+		components: {
+			default: Reservation,
+			crumbs: ReservationCrumbs
+		}
 	},
 	{
 		path: '/reservation',
 		name: 'Reservation',
-		component: Reservation
+		components: {
+			default: Reservation,
+			crumbs: ReservationCrumbs
+		}
 	},
 	{
 		path: '/weekly/:id',
 		name: 'Weekly',
-		component: Weekly
+		components: {
+			default: Weekly,
+			crumbs: WeeklyCrumbs
+		}
 	},
 	{
 		path: '/account',
 		name: 'MyAccount',
-		component: MyAccount
+		components: {
+			default: MyAccount,
+			crumbs: MyAccountCrumbs
+		}
 	},
 
 

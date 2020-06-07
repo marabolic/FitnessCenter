@@ -16,7 +16,5 @@ export default {
     WhyUs,
     TopRated
   },
-  created(){
-  }
 }
 </script>

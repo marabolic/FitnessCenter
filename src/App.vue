@@ -3,16 +3,21 @@
 		<div class="header-top">
 			<HeaderTop/>
 		</div>
-    <div class='menu'>
-      <Menu/>
-    </div>
-		<router-view/>
-			<div id="mybanner">
-				<Banners/>
+		<div class='menu'>
+			<Menu/>
+			<div class='row'>
+				<div class="offset-2 col-3">
+					<router-view name="crumbs" />
+				</div>
 			</div>
-      <div id="footer">
-        <Footer/>
-      </div>
+		</div>
+		<router-view/>
+		<div id="mybanner">
+			<Banners/>
+		</div>
+		<div id="footer">
+			<Footer/>
+		</div>
 	</div>
 </template>
 
@@ -105,15 +110,19 @@ import HeaderTop from './components/headerAndFooter/HeaderTop'
 import Menu from './components/headerAndFooter/Menu'
 import Footer from './components/headerAndFooter/Footer'
 import Banners from './components/headerAndFooter/Banners'
-
 export default {
-  name: 'App',
-  components: {
-    HeaderTop,
-    Menu,
-    Banners,
-    Footer
-  }
+	name: 'App',
+	components: {
+		HeaderTop,
+		Menu,
+		Banners,
+		Footer,
+	},
+	data: function(){
+		return {
+			lang: 0,
+			ckey: 0
+		}
+	},
 }
 </script>
-
