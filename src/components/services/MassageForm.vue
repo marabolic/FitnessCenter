@@ -3,6 +3,17 @@
         <form>
             <table>
                 <tr>
+					<td></td>
+					<td>
+					<p class='errors' v-if="errors.length">
+						<b>Please correct the following error(s):</b>
+						<ul>
+							<li v-for="error in errors" :key="error">{{ error }}</li>
+						</ul>
+					</p>
+					</td>
+				</tr>
+                <tr>
                     <td v-if="lang=='en'"> Name: </td>
                     <td v-else> Ime: </td>
                     <td><input type="text" v-model="name"> </td>
@@ -62,7 +73,8 @@ export default {
             email: '',
             phone: '',
             date: '',
-            description: ''
+            description: '',
+            errors: []
         }
     },
     created(){      
@@ -71,7 +83,40 @@ export default {
         }
     },
     methods:{
+        checkForm(){
+			this.errors = [];
+
+			if (!this.name) {
+				this.errors.push("Name required.");
+			}
+			if(!this.surname){
+				this.errors.push("Surname required.");
+			}
+			if (!this.email) {
+				this.errors.push('Email required.');
+			} else if (!this.validEmail(this.email)) {
+				this.errors.push('Valid email required.');
+			}
+			if(!this.phone){
+				this.errors.push("Phone number required.");
+			}
+
+			if (!this.errors.length) {
+				return true;
+			}
+			return false;
+		},
+		validEmail(){
+			var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(this.email);
+		},
         generate(){
+
+            
+			if (this.checkForm() == false){
+				return;
+            }
+            
             const doc = new jspdf();
             if (this.lang == "en"){
                 doc.text("Name: ",15,15);
