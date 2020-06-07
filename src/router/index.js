@@ -25,6 +25,8 @@ import TrainingTypeCrumbs from '../components/headerAndFooter/Crumbs/TrainingTyp
 
 Vue.use(VueRouter)
 
+var lang = localStorage.getItem('lang');
+
 const routes = [
 	{
 		path: '/',
@@ -32,7 +34,8 @@ const routes = [
 		components: {
 			default: Home,
 			crumbs: HomeCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Home":"Pocetna"}
 	},
 	{
 		path: '/trainingdetails/:id',
@@ -40,7 +43,8 @@ const routes = [
 		components: {
 			default: TrainingDetails,
 			crumbs: TrainingDetailsCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Details":"PregledTreninga"}
 	},
 	{
 		path: '/about',
@@ -51,7 +55,8 @@ const routes = [
 		components: {
 			default: About,
 			crumbs: AboutCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"About":"O nama"}
 	},
 	{
 		path: '/services',
@@ -59,7 +64,8 @@ const routes = [
 		components: {
 			default: Services,
 			crumbs: ServicesCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Services":"Usluge"}
 	},
 	{
 		path: '/train',
@@ -67,7 +73,8 @@ const routes = [
 		components: {
 			default: Programs,
 			crumbs: ProgramsCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Programs":"Treninzi"}
 		//component: () => import(/* webpackChunkName: "about" */ '../views/Programs.vue')
 	},
 	{
@@ -76,7 +83,8 @@ const routes = [
 		components: {
 			default: Massage,
 			crumbs: MassageCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Massage":"Masaza"}
 	},
 	{
 		path: '/nutritionist',
@@ -84,7 +92,8 @@ const routes = [
 		components: {
 			default: Nutritionist,
 			crumbs: NutriCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Nutritionist":"Nutricionista"}
 	},
 	{
 		path: '/yoga/:type', 
@@ -92,7 +101,8 @@ const routes = [
 		components: {
 			default: TrainingType,
 			crumbs: TrainingTypeCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Yoga":"Joga"}
 	},
 	{
 		path: '/pilates/:type', 
@@ -100,7 +110,8 @@ const routes = [
 		components: {
 			default: TrainingType,
 			crumbs: TrainingTypeCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Pilates":"Pilates"}
 	},
 	{
 		path: '/core/:type', 
@@ -108,7 +119,8 @@ const routes = [
 		components: {
 			default: TrainingType,
 			crumbs: TrainingTypeCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Core":"Kor"}
 	},
 	{
 		path: '/cardio/:type', 
@@ -116,7 +128,8 @@ const routes = [
 		components: {
 			default: TrainingType,
 			crumbs: TrainingTypeCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Cardio":"Kardio"}
 	},
 	{
 		path: '/reservation/:filter',
@@ -124,7 +137,8 @@ const routes = [
 		components: {
 			default: Reservation,
 			crumbs: ReservationCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Reservation":"Reservacija"}
 	},
 	{
 		path: '/reservation',
@@ -132,7 +146,8 @@ const routes = [
 		components: {
 			default: Reservation,
 			crumbs: ReservationCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Reservation":"Reservacija"}
 	},
 	{
 		path: '/weekly/:id',
@@ -140,7 +155,8 @@ const routes = [
 		components: {
 			default: Weekly,
 			crumbs: WeeklyCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"Weekly":"NedeljniRaspored"}
 	},
 	{
 		path: '/account',
@@ -148,7 +164,8 @@ const routes = [
 		components: {
 			default: MyAccount,
 			crumbs: MyAccountCrumbs
-		}
+		},
+		meta: {title:(lang=='en')?"MyAccount":"Moj Nalog"}
 	},
 
 
