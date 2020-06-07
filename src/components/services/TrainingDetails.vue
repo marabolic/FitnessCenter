@@ -70,82 +70,82 @@
                 Ocena:
             </h5>
             <div v-if="training.rating<=1">
-                <img src='../../../public/img/BlueStar.png'>
-                <img src='../../../public/img/GrayStar.png'>
-                <img src='../../../public/img/GrayStar.png'>
-                <img src='../../../public/img/GrayStar.png'>
-                <img src='../../../public/img/GrayStar.png'>
+                <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                <img @click="twoStar" src='../../../public/img/GrayStar.png'>
+                <img @click="threeStar" src='../../../public/img/GrayStar.png'>
+                <img @click="fourStar" src='../../../public/img/GrayStar.png'>
+                <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
             </div>
             <div v-else-if="training.rating<=1.5">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/HalfStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/HalfStar.png'>
+                    <img @click="threeStar" src='../../../public/img/GrayStar.png'>
+                    <img @click="fourStar" src='../../../public/img/GrayStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
                 </div>
             </div>
             <div v-else-if="training.rating<=2">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/GrayStar.png'>
+                    <img @click="fourStar" src='../../../public/img/GrayStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
                 </div>
             </div>
              <div v-else-if="training.rating<=2.5">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/HalfStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/HalfStar.png'>
+                    <img @click="fourStar" src='../../../public/img/GrayStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
                 </div>
             </div>
             <div v-else-if="training.rating<=3">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fourStar" src='../../../public/img/GrayStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
                 </div>
             </div>
             <div v-else-if="training.rating<=3.5">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/HalfStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fourStar" src='../../../public/img/HalfStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
                 </div>
             </div>
             <div v-else-if="training.rating<=4">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/GrayStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fourStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/GrayStar.png'>
                 </div>
             </div>
             <div v-else-if="training.rating <= 4.5">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/HalfStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fourStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/HalfStar.png'>
                 </div>
             </div>
              <div v-else-if="training.rating <= 5">
                 <div class='star'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
-                    <img src='../../../public/img/BlueStar.png'>
+                    <img @click="oneStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="twoStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="threeStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fourStar" src='../../../public/img/BlueStar.png'>
+                    <img @click="fiveStar" src='../../../public/img/BlueStar.png'>
                 </div>
             </div>
         </div>
@@ -308,7 +308,8 @@ export default {
             video: "",
             mycomment: "",
             commentsForType: [],
-            fixedComments: []
+            fixedComments: [],
+            ratings: []
         }
     },
     created(){      
@@ -317,6 +318,7 @@ export default {
         }
 
          
+        
 
         let id = Number(this.$route.params.id);
         let temp_train = this.trainings.find(
@@ -327,13 +329,26 @@ export default {
         this.first = this.training.picF;
         this.second = this.training.picS;
         this.third = this.training.picT;
-        
+
+        let ratings = localStorage.getItem('ratings');
+        if (ratings == null || ratings == 'undefined'){
+            
+            ratings = [];
+        }
+        else{
+            ratings = JSON.parse(ratings);
+            for(let i = 0; i < ratings.length; i++){
+                
+                if(ratings[i].id == id){
+                    this.training.rating = ratings[i].rating;
+                }
+            }
+        }
+
         for(let i = 0; i < this.training.comments.length; i++){
             this.fixedComments.push(this.training.comments[i].com);
         }
-        console.log("ovde");    
-        console.log(this.fixedComments);
-
+        
         this.getComments();
         //console.log(this.training);
     },
@@ -356,32 +371,118 @@ export default {
             localStorage.setItem('comments', JSON.stringify(comments));
             this.commentsForType.push(this.mycomment);
 
-            document.getElementById("mycomment").value = "";
+            //document.getElementById("mycomment").value = "";
             this.$forceUpdate();
 
         },
         getComments(){
             this.commentsForType = []
-
+            let myid = Number(this.$route.params.id);
             let comments = localStorage.getItem('comments');
             if (comments == null || comments == 'undefined'){
                 comments = [];
             }
             else{
                 comments = JSON.parse(comments);
-
-                let myid = Number(this.$route.params.id);
-
                 for (let i = 0; i < comments.length; i++){
                     if (comments[i].id == myid){
                         this.commentsForType.push(comments[i].comment);
-
                     }
                 }
             }
-
             
-        }
+
+            //for (let i = 0; i < comments.length; i++){
+                //{
+                  //  this.commentsForType.push(comments[i].comment);
+
+               // }
+            //}
+            
+        },
+        oneStar(){
+            console.log("one");
+            this.training.rating = 1;
+            let myid = Number(this.$route.params.id);
+
+            let ratings = localStorage.getItem('ratings');
+            if (ratings == null || ratings == 'undefined'){
+                ratings = [];
+            }
+            else{
+                ratings = JSON.parse(ratings);
+            }
+            ratings.push({id: myid, rating: this.training.rating});
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+
+            this.$forceUpdate();
+        },
+        twoStar(){
+            console.log("two");
+            this.training.rating = 2;
+            let myid = Number(this.$route.params.id);
+            let ratings = localStorage.getItem('ratings');
+            if (ratings == null || ratings == 'undefined'){
+                ratings = [];
+            }
+            else{
+                ratings = JSON.parse(ratings);
+            }
+            ratings.push({id: myid, rating: this.training.rating});
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            this.$forceUpdate();
+        },
+        threeStar(){
+            console.log("three");
+            this.training.rating = 3;
+            let myid = Number(this.$route.params.id);
+            let ratings = localStorage.getItem('ratings');
+            if (ratings == null || ratings == 'undefined'){
+                ratings = [];
+            }
+            else{
+                ratings = JSON.parse(ratings);
+            }
+            ratings.push({id: myid, rating: this.training.rating});
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+
+            this.training.rating = 3;
+            this.$forceUpdate();
+        },
+        fourStar(){
+            console.log("four");
+            this.training.rating = 4;
+            let myid = Number(this.$route.params.id);
+            let ratings = localStorage.getItem('ratings');
+            if (ratings == null || ratings == 'undefined'){
+                ratings = [];
+            }
+            else{
+                ratings = JSON.parse(ratings);
+            }
+            ratings.push({id: myid, rating: this.training.rating});
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+
+            this.training.rating = 4;
+            this.$forceUpdate();
+        },
+        fiveStar(){
+            console.log("five");
+            this.training.rating = 5;
+            let myid = Number(this.$route.params.id);
+            let ratings = localStorage.getItem('ratings');
+            if (ratings == null || ratings == 'undefined'){
+                ratings = [];
+            }
+            else{
+                ratings = JSON.parse(ratings);
+            }
+            ratings.push({id: myid, rating: this.training.rating});
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+
+            this.$forceUpdate();
+        },
+        
     }
 }
 </script>
